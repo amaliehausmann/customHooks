@@ -3,7 +3,7 @@ import { useFetch } from "./hooks/useFetch";
 import { useImages } from "./hooks/useImages";
 
 function App() {
-  const { data } = useFetch("https://jsonplaceholder.typicode.com/todos");
+  const { data } = useFetch("https://jsonplaceholder.typicode.com/users");
   console.log(data);
 
   const images = useImages();
@@ -12,7 +12,7 @@ function App() {
     <>
       <div>
         {data.length > 0 &&
-          data?.map((item) => <p key={item.id}>{item.title}</p>)}
+          data?.map((item) => <p key={item.id}>{item.name}</p>)}
       </div>
       <div>
         {images.length > 0 &&
