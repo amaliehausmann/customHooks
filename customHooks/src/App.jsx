@@ -1,10 +1,12 @@
 import "./App.scss";
 import { useFetch } from "./hooks/useFetch";
 import { useImages } from "./hooks/useImages";
+import { useTitle } from "./hooks/useTitle";
 
 function App() {
   const { data } = useFetch("https://jsonplaceholder.typicode.com/users");
   const { images }= useImages();
+  // useTitle('Home');
 
   return (
     <>
